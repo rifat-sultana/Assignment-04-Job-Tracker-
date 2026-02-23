@@ -21,7 +21,23 @@
     body{
         font-family: "Geist", sans-serif;
     }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  display: block;
+}
+
+.text {
+  display: block;
+  flex-direction: column;
   
+}
+
   </style>
 
 </head>
@@ -34,17 +50,17 @@
     <div class=" grid grid-cols-3  gap-6 "> 
 
     <div class="bg-white  p-6 shadow-md rounded ">
-      <p class="font-bold">Total</p>
+      <p class="font-bold ">Total</p>
       <p class="text-[#323B49] font-bold" id="totalCount"> 8 </p>
     </div>
 
     <div class="bg-white p-6 shadow-md rounded">
-      <p class="font-bold" > Interview </p>
+      <p class="font-bold text-[15px]" > Interview </p>
       <p class="text-[#10B981] font-bold" id="interviewCount">0 </p>
     </div>
 
     <div class="bg-white p-6 shadow-md rounded ">
-      <p class="font-bold"> Rejected </p>
+      <p class="font-bold text-[15px]"> Rejected </p>
       <p class="text-red-500 font-bold" id="rejectedCount"> 0 </p>
     </div>
 
@@ -63,33 +79,32 @@
       </div>
       
       <div class="pt-3 flex gap-10 mb-6 " >
-        <button onclick= "toggleStyle('all-filter-btn')" class="bg-white  text-black px-7 py-1 shadow-md rounded font-bold" id="all-filter-btn"> All </button>
+        <button onclick= "toggleStyle('all-filter-btn')" text-[15px] class="bg-white  text-black px-7 py-1 shadow-md text-[15px] rounded font-bold" id="all-filter-btn"> All </button>
 
-        <button onclick="toggleStyle('interview-filter-btn')" class="bg-white p-6  shadow-md rounded font-bold" id="interview-filter-btn"> Interview </button>
+        <button onclick="toggleStyle('interview-filter-btn')" text-[15px] class="bg-white p-6 text-[15px] shadow-md rounded font-bold" id="interview-filter-btn"> Interview </button>
 
-        <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white p-6 shadow-md rounded font-bold" id="rejected-filter-btn"> Rejected </button>
+        <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white p-6 shadow-md rounded font-bold text-[15px] " id="rejected-filter-btn"> Rejected </button>
       </div>
   </div>
   </section>
 
 
-  <div class="job-card flex items-center justify-center  border border-gray-300 p-8 rounded-xl shadow-md  bg-white">
+  <div class="job-card border border-gray-300  p-16 mb-10 rounded-xl bg-white shadow-md  ">
     
-    <div class="py-15 content-center" >
+    <div class="container " >
       <img src="./jobs.png">
-      <h2 class="text-[#002C5C]  font-2xl font-semibold"> No jobs Available</h2>
-      <p class="text-[#64748B] text-xs"> Check back soon for new job opportunities </p>
-
-    </div>
+      </div>
       
+      <div class="text-center"> 
+      <h2 class="text-[#002C5C]  font-2xl font-semibold pt-8 pb-2"> No jobs Available</h2>
+      <p class="text-[#64748B] text-xs pb-10"> Check back soon for new job opportunities </p>
 
-      
-       
+      </div>
     
   </div>
 
 
-<script src="script.js"></script>
+      <script src="script.js"></script>
 
 
 

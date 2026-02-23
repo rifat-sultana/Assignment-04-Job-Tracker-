@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <!-- tailwind +daisyUi -->
    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -34,17 +35,17 @@
     <div class=" grid grid-cols-3  gap-6 "> 
 
     <div class="bg-white  p-6 shadow-md rounded ">
-      <p class="font-bold">Total</p>
+      <p class="font-bold text-[15px]">Total</p>
       <p class="text-[#323B49] font-bold" id="totalCount"> 8 </p>
     </div>
 
     <div class="bg-white p-6 shadow-md rounded">
-      <p class="font-bold" > Interview </p>
-      <p class="text-[#10B981] font-bold" id="interviewCount">0 </p>
+      <p class="font-bold text-[15px]"> Interview </p>
+      <p class="text-[#10B981] font-bold" id="interviewCount"> 0 </p>
     </div>
 
     <div class="bg-white p-6 shadow-md rounded ">
-      <p class="font-bold"> Rejected </p>
+      <p class="font-bold text-[15px]"> Rejected </p>
       <p class="text-red-500 font-bold" id="rejectedCount"> 0 </p>
     </div>
 
@@ -63,11 +64,11 @@
       </div>
       
       <div class="pt-3 flex gap-10 mb-6 " >
-        <button onclick= "toggleStyle('all-filter-btn')" class="bg-white  text-black px-7 py-1 shadow-md rounded font-bold" id="all-filter-btn"> All </button>
+        <button onclick= "toggleStyle('all-filter-btn')" class="bg-white  text-black px-7 py-1 shadow-md rounded font-bold text-[12px]" id="all-filter-btn"> All </button>
 
-        <button onclick="toggleStyle('interview-filter-btn')" class="bg-white p-6  shadow-md rounded font-bold" id="interview-filter-btn"> Interview </button>
+        <button onclick="toggleStyle('interview-filter-btn')" class="bg-white p-6  shadow-md rounded font-bold text-[12px] " id="interview-filter-btn"> Interview </button>
 
-        <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white p-6 shadow-md rounded font-bold" id="rejected-filter-btn"> Rejected </button>
+        <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white p-6 shadow-md rounded font-bold text-[12px]" id="rejected-filter-btn"> Rejected </button>
       </div>
   </div>
   </section>
@@ -97,8 +98,8 @@
       </div>
 
       <div class=" flex gap-5 mb-4 ">
-        <button class="interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class="rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class="interview-btn font-semibold px-5 py-2 border text-red-500 shadow-md " > INTERVIEW </button>
+        <button class="rejected-btn font-semibold px-2 py-2 shadow-md border text-green-500"  > REJECTED </button>
       </div>
     </div>
        
@@ -130,8 +131,8 @@
       </div>
 
       <div class=" flex gap-5 mb-4">
-        <button class="interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class="rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class="interview-btn shadow-md font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
+        <button class="rejected-btn font-semibold px-5 py-1 shadow-md border text-green-500"> REJECTED </button>
       </div>
     </div>
        
@@ -163,8 +164,8 @@
       </div>
 
       <div class=" flex gap-5 mb-4">
-        <button class=" interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class=" rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class=" interview-btn font-semibold px-5 py-2 shadow-md border text-red-500" > INTERVIEW </button>
+        <button class=" rejected-btn font-semibold px-5 py-2 shadow-md border text-green-500"  > REJECTED </button>
       </div>
     </div>
        
@@ -197,8 +198,8 @@
       </div>
 
       <div class=" flex gap-5 mb-4">
-        <button class="interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class="rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class="interview-btn font-semibold px-5 py-2 border text-red-500 shadow-md" > INTERVIEW </button>
+        <button class="rejected-btn font-semibold px-5 py-2 border shadow-md text-green-500"  > REJECTED </button>
       </div>
     </div>
        
@@ -231,8 +232,8 @@
       </div>
 
       <div class=" flex gap-5 mb-4">
-        <button class="interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class="rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class="interview-btn font-semibold px-5 py-2 shadow-md border text-red-500" > INTERVIEW </button>
+        <button class="rejected-btn font-semibold px-5 py-2 shadow-md border text-green-500"  > REJECTED </button>
       </div>
     </div>
        
@@ -264,8 +265,8 @@
       </div>
 
       <div class=" flex gap-5 mb-4">
-        <button class="interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class="rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class="interview-btn font-semibold px-5 py-2 shadow-md border text-red-500" > INTERVIEW </button>
+        <button class="rejected-btn font-semibold px-5 py-1 shadow-md border text-green-500"  > REJECTED </button>
       </div>
     </div>
        
@@ -297,8 +298,8 @@
       </div>
 
       <div class=" flex gap-5 mb-4">
-        <button class="interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class="rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class="interview-btn font-semibold px-5 py-2 shadow-md border text-red-500" > INTERVIEW </button>
+        <button class="rejected-btn font-semibold px-5 py-1 shadow-md border text-green-500"  > REJECTED </button>
       </div>
     </div>
        
@@ -324,14 +325,14 @@
       </div>
 
       <div>
-        <button class="status-btn text-[#002C5C] font-semibold px-2 py-2 bg-gray-200 mb-3"> NOT APPLIED</button>
+        <button class="status-btn text-[#002C5C] font-semibold px-2 py-2 shadow-md bg-gray-200 mb-3"> NOT APPLIED</button>
 
         <p class="text-[#323B49] mb-5"> We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
       </div>
 
       <div class=" flex gap-5 mb-4">
-        <button class="interview-btn font-semibold px-5 py-2 border text-red-500" > INTERVIEW </button>
-        <button class="rejected-btn font-semibold px-5 py-1 border text-green-500"  > REJECTED </button>
+        <button class="interview-btn font-semibold px-5 py-2 shadow-md border text-red-500" > INTERVIEW </button>
+        <button class="rejected-btn font-semibold px-5 py-2 shadow-md border text-green-500"  > REJECTED </button>
       </div>
     </div>
        

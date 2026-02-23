@@ -1,5 +1,4 @@
 
-
 let interviewList = [];
 let rejectedList= [];
 
@@ -25,7 +24,8 @@ console.log(cardItems.children.length);
 
 function toggleStyle(id){
 
-    // all button reset.....
+    // reset all button ...........
+    
     allFilterBtn.classList.remove('bg-cyan-300', 'text-red');
     interviewFilterBtn.classList.remove('bg-cyan-300', 'text-red');
     rejectedFilterBtn.classList.remove('bg-cyan-300', 'text-red');
@@ -78,6 +78,42 @@ document.querySelectorAll(".rejected-btn").forEach(btn => {
     });
 });
 
+// Interview click
+document.querySelectorAll(".interview-btn").forEach(btn => {
+
+    btn.addEventListener("click", function() {
+
+    const card = this.closest(".job-card");
+
+    const interviewBtn = card.querySelector(".interview-btn");
+    const rejectedBtn = card.querySelector(".rejected-btn");
+
+    interviewBtn.classList.add("bg-red-500", "text-white");
+    rejectedBtn.classList.remove("bg-green-500", "text-white");
+
+  });
+
+});
+
+    // Rejected click...........
+document.querySelectorAll(".rejected-btn").forEach(btn => {
+
+  btn.addEventListener("click", function() {
+
+    const card = this.closest(".job-card");
+
+    const interviewBtn = card.querySelector(".interview-btn");
+    const rejectedBtn = card.querySelector(".rejected-btn");
+
+    rejectedBtn.classList.add("bg-green-500", "text-white");
+    interviewBtn.classList.remove("bg-red-500", "text-white");
+
+  });
+
+});
+
+// filtering...................
+
 const allFilterBtn = document.getElementById("all-filter-btn");
 const interviewFilterBtn = document.getElementById("interview-filter-btn");
 const rejectedFilterBtn = document.getElementById("rejected-filter-btn");
@@ -101,24 +137,42 @@ interviewFilterBtn.addEventListener("click", function() {
     cards.forEach(card => {
 
      const status = card.querySelector(".status-btn").innerText.trim();
-
         if (status === "INTERVIEW") {
             card.style.display = "flex";
         } else {
             card.style.display = "none";
         }
-
     });
-
 });
 
 
+//  no jobs available file.....
+interviewFilterBtn.addEventListener("click", function () {
+
+    let count = 0;
+
+    document.querySelectorAll(".job-card")
+        .forEach(card => {
+        const status = card.querySelector(".status-btn").innerText.trim();
+
+        if (status === "INTERVIEW") {
+            card.style.display = "flex";
+            count++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+        if (count === 0) {
+        window.location.href = "nojob.html";
+    }
+});
+
 
 // Rejected filter click......
-rejectedFilterBtn.addEventListener("click", function() {
+rejectedFilterBtn.addEventListener("click",function() {
 
     cards.forEach(card => {
-
         const status = card.querySelector(".status-btn").innerText.trim();
 
         if (status === "REJECTED") {
@@ -131,6 +185,39 @@ rejectedFilterBtn.addEventListener("click", function() {
 
 });
 
+// no jobs available............
 
+rejectedFilterBtn.addEventListener("click",function () {
 
+    let count = 0;
 
+    document.querySelectorAll(".job-card")
+    .forEach(card => {
+        const status = card.querySelector(".status-btn").innerText.trim();
+
+        if (status === "REJECTED") {
+            card.style.display = "flex";
+            count++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    if (count === 0) {
+        window.location.href = "nojob.html";
+    }
+
+});
+
+// Activity of delete button................
+
+document.querySelectorAll(".delete-btn")
+     .forEach(btn => {
+   btn.addEventListener("click", function () {
+
+    const card = this.closest(".job-card");
+    card.remove();   
+  });
+
+});

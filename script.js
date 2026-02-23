@@ -59,8 +59,8 @@ document.querySelectorAll(".interview-btn").forEach(btn => {
           status.innerText = "INTERVIEW";
             totalCount.innerText--;
             interviewCount.innerText++;
-        }
-    });
+          }
+     });
 });
 
 // Rejected Click
@@ -74,8 +74,8 @@ document.querySelectorAll(".rejected-btn").forEach(btn => {
           status.innerText = "REJECTED";
             totalCount.innerText--;
             rejectedCount.innerText++;
-        }
-    });
+          }
+       });
 });
 
 // Interview click
@@ -122,7 +122,7 @@ const cards = document.querySelectorAll(".job-card");
 
 
 // All filter click...
-allFilterBtn.addEventListener("click", function() {
+allFilterBtn.addEventListener("click",function() {
 
     cards.forEach(card => {
         card.style.display = "flex";
@@ -132,7 +132,7 @@ allFilterBtn.addEventListener("click", function() {
 
 
 // Interview filter click....
-interviewFilterBtn.addEventListener("click", function() {
+interviewFilterBtn.addEventListener("click",function() {
 
     cards.forEach(card => {
 

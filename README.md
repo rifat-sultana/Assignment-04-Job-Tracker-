@@ -19,10 +19,11 @@
   ```
 
  Const heading = document.getElementById("title");
-   <h1 id="title">Hello</h1>
-
-   const paragraph = document.getElementsByClassName("box);
-   ->more than one element here includes in one class  box.
+ ```
+ <h1 id="title">Hello</h1>
+```
+const paragraph = document.getElementsByClassName("box);
+ ->more than one element here includes in one class  box.
 
 
 **Q.1.1 What is the difference between querySelector and querySelectorAll?**

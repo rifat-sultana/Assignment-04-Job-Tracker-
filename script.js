@@ -221,3 +221,13 @@ document.querySelectorAll(".delete-btn")
   });
 
 });
+
+// updating job count.........
+let jobs = 8;
+
+function moveJob() {
+    if (jobs > 0) {
+        jobs--;
+        document.getElementById("jobCount").innerText = jobs;
+    }
+}

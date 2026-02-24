@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- tailwind +daisyUi -->
-
+   
    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -46,14 +46,14 @@ img {
 
 </head>
 
-<body class=" bg-gray-100 min-h-screen pb-24">
+<body class="bg-gray-100 min-h-screen pb-24">
 
-  <header class="w-[80%] mx-auto pt-10 pb-10 ">
+  <header class="w-[80%] mx-auto pt-10 pb-10">
     <h1 class="text-3xl font-bold text-[#002C5C] mb-6"> Job Application Tracker</h1>
 
     <div class=" grid grid-cols-3  gap-6 "> 
 
-    <div class="bg-white  p-6 shadow-md rounded my-8">
+    <div class="bg-white  p-6 shadow-md rounded ">
       <p class="font-bold ">Total</p>
       <p class="text-[#323B49] font-bold" id="totalCount"> 8 </p>
     </div>
@@ -71,9 +71,9 @@ img {
     </div>
   </header>
 
-<hr class="my-6 w-[80%] mx-auto border-gray-300" >
+<hr class="my-6 max-w-6xl mx-auto border-gray-300">
 
-  <main id="container" class="w-[80%] mx-auto">
+  <main id="container" class="max-w-6xl mx-auto px-6">
 
   <section> 
   <div>
@@ -83,11 +83,11 @@ img {
       </div>
       
       <div class="pt-3 flex gap-10 mb-6 " >
-        <button onclick= "toggleStyle('all-filter-btn')" text-[15px] class="bg-white  text-black px-7 py-1 shadow-md text-[15px] rounded font-bold" id="all-filter-btn"> All </button>
+        <button onclick= "toggleStyle('all-filter-btn')" text-[13px] class="bg-white  text-black px-7 py-1 shadow-md text-[15px] rounded font-bold" id="all-filter-btn"> All </button>
 
-        <button onclick="toggleStyle('interview-filter-btn')" text-[15px] class="bg-white p-6 text-[15px] shadow-md rounded font-bold" id="interview-filter-btn"> Interview </button>
+        <button onclick="toggleStyle('interview-filter-btn')" text-[13px] class="bg-white p-6 text-[15px] shadow-md rounded font-bold" id="interview-filter-btn"> Interview </button>
 
-        <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white p-6 shadow-md rounded font-bold text-[15px] " id="rejected-filter-btn"> Rejected </button>
+        <button onclick="toggleStyle('rejected-filter-btn')" class="bg-white p-6 shadow-md rounded font-bold text-[13px] " id="rejected-filter-btn"> Rejected </button>
       </div>
   </div>
   </section>
